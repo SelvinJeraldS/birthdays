@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="styles.css">
+  <title>Birthday Card</title>
+  
+</head>
+<body>
+  <div class="card">
+    <div class="gift-box" onclick="revealMessage()">
+      <div class="lid"></div>
+      <div class="box">
+        <div class="ribbon"></div>
+      </div>
+    </div>
+    <div class="slides">
+       <div class="slide" id="slide1">
+        <img src="" alt="Image 1">
+        <!-- <img src="https://via.placeholder.com/400" alt="Image 2"> -->
+      </div> 
+      <div class="slide" id="slide2">
+        <p class="decorative-text">Hey, girl! May this birthday be filled with joy, laughter, and everything that brings a smile to your beautiful face!
+          Out of all the brightly shining stars in the sky, you are the brightest and most beautiful one to me. Happy birthday to you.
+        </p>
+        
+      </div>
+    </div>
+  </div>
+
+  <!-- Next page with images in marquee -->
+  <div style="display: flex; justify-content: center;">
+    <button onclick="test()">
+      <a href="marque.html">Next</a>
+    </button>
+  </div>
+
+  <!-- Falling rose petals in the background -->
+  <div class="falling-petals">
+    <!-- Add as many petals as you like -->
+    <div class="petal" style="left: 10%; animation-delay: 0s;"></div>
+    <div class="petal" style="left: 30%; animation-delay: 1s;"></div>
+    <div class="petal" style="left: 50%; animation-delay: 2s;"></div>
+    <div class="petal" style="left: 70%; animation-delay: 0.5s;"></div>
+    <div class="petal" style="left: 90%; animation-delay: 1.5s;"></div>
+    <!-- Add more petals here -->
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
