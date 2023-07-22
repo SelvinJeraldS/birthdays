@@ -1,0 +1,43 @@
+
+body {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  height: 100vh;
+  margin: 0;
+}
+
+.marquee-container {
+  overflow: hidden;
+  width: 100%;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 30s linear infinite;
+}
+
+.marquee img {
+  display: inline-block;
+  height: 500px; /* Adjust the height as needed */
+  margin: 5px; /* Add spacing betw
+  een images */
+  
+}
+
+@keyframes marquee-scroll {
+  0% {
+      transform: translateX(100%);
+  }
+  100% {
+      transform: translateX(-100%);
+  }
+}
+.decorative-text {
+  font-size: 36px; /* Adjust the font size as needed */
+  letter-spacing: 4px; /* Add some letter spacing for a decorative effect */
+  text-align: center; /* Center the text */
+  color: purple; /* Change the text color to match the theme */
+}

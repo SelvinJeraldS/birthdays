@@ -1,0 +1,147 @@
+/* styles.css */
+body {
+  font-family: Arial, sans-serif;
+  margin: 0;
+  padding: 0;
+  /* background-color: #f1f1f1; */
+  background-color: pink; /* Set the background color to pink */
+  background-image: url("flowers-background.jpg"); /* Replace with the path to your flower background image */
+  background-repeat: repeat; /* Repeat the flower background horizontally and vertically */
+  background-attachment: fixed; /* Ensure the background image doesn't scroll with the content */
+  margin: 0; /* Remove default body margin */
+  overflow: hidden; /* Prevent scrollbars caused by falling flowers */
+
+}
+
+.card {
+  max-width: 400px;
+  margin: 50px auto;
+  background-color: #fff;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+}
+
+.gift-box {
+  position: relative;
+  width: 100%;
+  padding-top: 65%;
+  background-color: #ffc107;
+  cursor: pointer;
+}
+
+.lid {
+  position: absolute;
+  top: 0;
+  left: 10%;
+  right: 10%;
+  height: 30%;
+  background-color: #f44336;
+  border-radius: 10px 10px 0 0;
+}
+
+.box {
+  position: absolute;
+  top: 30%;
+  left: 5%;
+  right: 5%;
+  bottom: 10%;
+  background-color: #e91e63;
+  border-radius: 0 0 10px 10px;
+}
+
+.ribbon {
+  position: absolute;
+  top: 15%;
+  left: 45%;
+  width: 10%;
+  height: 20%;
+  background-color: #fff;
+  transform: rotate(-45deg);
+}
+
+.slides {
+  position: relative;
+  padding: 20px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.slide {
+  display: none;
+  text-align: center;
+}
+
+.slide img {
+  max-width: 100%;
+  border-radius: 5px;
+  margin-bottom: 20px;
+}
+
+.slide p {
+  font-size: 18px;
+  line-height: 1.5;
+  color: #333;
+}
+
+/* Show the second slide when it's active */
+#slide2.active {
+  display: block;
+}
+
+#slide3.active{
+
+  display: block;
+}
+marquee-container {
+  overflow: hidden;
+}
+
+.marquee {
+  display: inline-block;
+  white-space: nowrap;
+  animation: marquee-scroll 20s linear infinite;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(100%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+@keyframes falling-rose-petals {
+  0% {
+    transform: translateY(-100%);
+    opacity: 0;
+  }
+  100% {
+    transform: translateY(100vh) translateX(calc(100% - 50px));
+    opacity: 1;
+  }
+}
+
+.falling-petals {
+  pointer-events: none; /* Make sure petals don't interfere with content */
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+}
+
+.petal {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  background-image: url("https://www.pngall.com/wp-content/uploads/5/Red-Rose-Petals-PNG-Free-Image.png"); /* Replace with the path to your rose petal image */
+  animation: falling-rose-petals 5s linear infinite;
+}
+.decorative-text {
+  font-size: 36px; /* Adjust the font size as needed */
+  letter-spacing: 4px; /* Add some letter spacing for a decorative effect */
+  text-align: center; /* Center the text */
+  color: purple; /* Change the text color to match the theme */
+}
